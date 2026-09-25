@@ -1,0 +1,18 @@
+{
+  "nomeSistema": "Conecta Saúde",
+  "versao": "1.0.0",
+  "ano": 2026,
+  "especialidades": [
+    "Ortopedista",
+    "Cardiologista",
+    "Pediatra",
+    "Clínico Geral",
+    "Dermatologista",
+    "Ginecologista",
+    "Neurologista"
+  ],
+  "tiposConsulta": [
+    "Presencial",
+    "Online"
+  ]
+}

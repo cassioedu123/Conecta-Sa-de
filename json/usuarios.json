@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "nome": "João da Silva",
+    "email": "joao@email.com",
+    "cpf": "123.456.789-00",
+    "senha": "123456",
+    "tipo": "paciente",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80"
+  },
+  {
+    "id": "2",
+    "nome": "Maria Souza",
+    "email": "maria@email.com",
+    "cpf": "987.654.321-11",
+    "senha": "123456",
+    "tipo": "paciente",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=250&q=80"
+  },
+  {
+    "id": "3",
+    "nome": "Dr. Pedro Candido",
+    "email": "pedro@conectasaude.com",
+    "cpf": "111.222.333-44",
+    "senha": "123456",
+    "tipo": "profissional",
+    "especialidade": "Ortopedista",
+    "crm": "CRM/SP 123456",
+    "avatar": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80"
+  },
+  {
+    "id": "4",
+    "nome": "Dra. Isabela Martins",
+    "email": "isabela@conectasaude.com",
+    "cpf": "555.666.777-88",
+    "senha": "123456",
+    "tipo": "profissional",
+    "especialidade": "Cardiologista",
+    "crm": "CRM/SP 654321",
+    "avatar": "https://images.unsplash.com/photo-1594824813566-78a9c3757f46?auto=format&fit=crop&w=400&q=80"
+  }
+]

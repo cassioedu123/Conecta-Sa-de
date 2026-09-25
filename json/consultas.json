@@ -1,0 +1,72 @@
+[
+  {
+    "id": "c1",
+    "pacienteId": "1",
+    "pacienteNome": "João da Silva",
+    "profissionalId": "3",
+    "medicoNome": "Dr. Pedro Candido",
+    "especialidade": "Ortopedista",
+    "data": "2026-05-24",
+    "dataFormatada": "24 Maio",
+    "horario": "08:00",
+    "tipo": "Consulta",
+    "motivo": "Dor no joelho",
+    "status": "Confirmado"
+  },
+  {
+    "id": "c2",
+    "pacienteId": "5",
+    "pacienteNome": "Daniel Boming",
+    "profissionalId": "3",
+    "medicoNome": "Dr. Pedro Candido",
+    "especialidade": "Ortopedista",
+    "data": "2026-05-24",
+    "dataFormatada": "24 Maio",
+    "horario": "09:00",
+    "tipo": "Consulta",
+    "motivo": "Luxação no ombro",
+    "status": "Confirmado"
+  },
+  {
+    "id": "c3",
+    "pacienteId": "6",
+    "pacienteNome": "Filipe Valentim",
+    "profissionalId": "3",
+    "medicoNome": "Dr. Pedro Candido",
+    "especialidade": "Ortopedista",
+    "data": "2026-05-24",
+    "dataFormatada": "24 Maio",
+    "horario": "11:30",
+    "tipo": "Retorno",
+    "motivo": "Fratura no punho",
+    "status": "Confirmado"
+  },
+  {
+    "id": "c4",
+    "pacienteId": "1",
+    "pacienteNome": "João da Silva",
+    "profissionalId": "3",
+    "medicoNome": "Dr. Pedro Candido",
+    "especialidade": "Ortopedista",
+    "data": "2026-05-24",
+    "dataFormatada": "24 Maio",
+    "horario": "14:00",
+    "tipo": "Consulta",
+    "motivo": "Acompanhamento geral",
+    "status": "Aguardando confirmação"
+  },
+  {
+    "id": "c5",
+    "pacienteId": "1",
+    "pacienteNome": "João da Silva",
+    "profissionalId": "4",
+    "medicoNome": "Dra. Isabela Martins",
+    "especialidade": "Cardiologista",
+    "data": "2026-05-24",
+    "dataFormatada": "24 Maio",
+    "horario": "14:00",
+    "tipo": "Consulta",
+    "motivo": "Exame rotina",
+    "status": "Confirmada"
+  }
+]

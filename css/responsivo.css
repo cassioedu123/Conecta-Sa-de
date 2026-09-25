@@ -1,0 +1,80 @@
+@media (max-width: 992px) {
+  .dashboard-grid-patient {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-grid-doctor {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .banner-illustration {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    padding: 0.8rem 1rem;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-teal-dark);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .nav-links.active {
+    transform: translateY(0);
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .auth-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .dashboard-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .custom-table th, .custom-table td {
+    padding: 0.75rem 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo span {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
