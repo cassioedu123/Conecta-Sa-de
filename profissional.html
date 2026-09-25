@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profissional — Conecta Saúde</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-container">
+      <a href="profissional.html" class="brand-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 88C50 88 12 62 12 36C12 22.7 22.7 12 36 12C43.5 12 50 16 50 16C50 16 56.5 12 64 12C77.3 12 88 22.7 88 36C88 62 50 88 50 88Z" stroke="#e66700" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 46H36L43 30L55 62L64 42L70 46H78" stroke="#e66700" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-title-white">
+          <span>Conecta</span>
+          <span>Saúde</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="profissional.html" class="nav-item active">
+              <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              Início
+            </a>
+          </li>
+          <li>
+            <a href="#agenda" class="nav-item">
+              <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              Agenda
+            </a>
+          </li>
+          <li>
+            <a href="#consultas-realizadas" class="nav-item">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+              Consultas Realizadas
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#atender" class="btn btn-orange">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          Atender
+        </a>
+        <div class="user-profile-icon" title="Sair / Perfil" onclick="logoutUser()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Abrir Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="dashboard-grid-doctor">
+      <aside class="profile-card">
+        <div class="profile-avatar-wrapper">
+          <img src="img/pcdd.png" alt="Dr. Pedro Candido">
+        </div>
+        <h3 id="doctorName" class="profile-name">Dr. Pedro Candido</h3>
+        <p id="doctorRole" class="profile-role">Ortopedista</p>
+      </aside>
+
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div class="dashboard-banner" style="margin-bottom: 0;">
+          <div class="banner-text">
+            <h2>Olá , <span id="welcomeDoctorName">Dr. Pedro Candido</span></h2>
+            <p>Seja bem-vindo! Aqui está o resumo do seu dia</p>
+          </div>
+          <div class="banner-date">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+            </svg>
+            <div>
+              <div style="font-size: 1.15rem; font-weight: 700;">24 de maio de 2026</div>
+              <div style="font-size: 0.9rem; color: #555; text-align: right;">Sexta-feira</div>
+            </div>
+          </div>
+          <svg class="banner-illustration" viewBox="0 0 100 100" fill="none" stroke="#0d8a80" stroke-width="4">
+            <path d="M30 20V50C30 65 40 75 55 75C70 75 80 65 80 50V20" stroke-linecap="round"/>
+            <circle cx="30" cy="20" r="5" fill="#0d8a80"/>
+            <circle cx="80" cy="20" r="5" fill="#0d8a80"/>
+            <path d="M55 75V85" stroke-linecap="round"/>
+            <circle cx="55" cy="90" r="8" fill="#e66700"/>
+          </svg>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number">04</div>
+              <div class="stat-label">Consultas hoje</div>
+              <div class="stat-sub">Próxima: 08:00</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number">03</div>
+              <div class="stat-label">Retornos hoje</div>
+              <div class="stat-sub">Próximo: 11:30</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div class="stat-info">
+              <div class="stat-number">30</div>
+              <div class="stat-label">Pacientes online</div>
+              <div class="stat-sub">Ultimos 30 dias</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <div class="table-header-title">
+            Proximos Atendimentos
+          </div>
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Horário</th>
+                <th>Paciente</th>
+                <th>Tipo</th>
+                <th>Motivo</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="doctorAppointmentsTableBody">
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    Conecta Saude © 2026
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/profissional.js"></script>
+</body>
+</html>

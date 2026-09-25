@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paciente — Conecta Saúde</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-container">
+      <a href="paciente.html" class="brand-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 88C50 88 12 62 12 36C12 22.7 22.7 12 36 12C43.5 12 50 16 50 16C50 16 56.5 12 64 12C77.3 12 88 22.7 88 36C88 62 50 88 50 88Z" stroke="#e66700" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 46H36L43 30L55 62L64 42L70 46H78" stroke="#e66700" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-title-white">
+          <span>Conecta</span>
+          <span>Saúde</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="paciente.html" class="nav-item active">
+              <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              Início
+            </a>
+          </li>
+          <li>
+            <a href="#profissionais" class="nav-item">
+              <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+              Profissionais
+            </a>
+          </li>
+          <li>
+            <a href="#consultas" class="nav-item">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+              Consultas
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="openScheduleModalBtn" class="btn btn-orange">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          Agendar
+        </button>
+        <div class="user-profile-icon" title="Sair / Perfil" onclick="logoutUser()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Abrir Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="dashboard-grid-patient">
+      <div class="photo-card" style="border: 2px solid var(--primary-teal-light);">
+        <img src="img/velha.png" alt="Médico e Paciente em Atendimento" style="height: 100%; object-fit: cover;">
+      </div>
+
+      <div class="card-box card-box-teal" style="display: flex; flex-direction: column; justify-content: center; padding: 2.2rem;">
+        <h2 style="color: var(--primary-teal-dark); font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem;">
+          Bem-vindo(a) ao Conecta Saúde!
+        </h2>
+        <p style="color: #265954; font-size: 1.1rem; line-height: 1.5; font-weight: 500;">
+          Cuide da sua saúde de forma simples e segura. Agende consultas, acompanhe seu histórico médico e encontre profissionais qualificados em poucos cliques.
+        </p>
+      </div>
+    </div>
+
+    <div class="dashboard-grid-patient">
+      <div class="card-box card-box-teal">
+        <h3 class="card-title" style="margin-bottom: 1.5rem;">Suas proximas consultas</h3>
+        <div id="patientAppointmentsContainer" class="appointment-list">
+        </div>
+      </div>
+
+      <div class="photo-card" style="border: 2px solid var(--primary-teal-light);">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Médica e Paciente" style="height: 100%; object-fit: cover;">
+      </div>
+    </div>
+  </main>
+
+  <div id="scheduleModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3>Agendar Nova Consulta</h3>
+        <button id="closeScheduleModalBtn" class="modal-close">&times;</button>
+      </div>
+
+      <div id="modalAlert" class="alert-message"></div>
+
+      <form id="scheduleForm">
+        <div class="form-group">
+          <label for="selectMedico">Selecione o Profissional:</label>
+          <select id="selectMedico" class="form-select" required>
+            <option value="" disabled selected>Escolha o médico...</option>
+            <option value="3" data-esp="Ortopedista">Dr. Pedro Candido — Ortopedista</option>
+            <option value="4" data-esp="Cardiologista">Dra. Isabela Martins — Cardiologista</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="inputData">Data da Consulta:</label>
+          <input type="date" id="inputData" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label for="inputHorario">Horário:</label>
+          <select id="inputHorario" class="form-select" required>
+            <option value="08:00">08:00</option>
+            <option value="09:00">09:00</option>
+            <option value="10:30">10:30</option>
+            <option value="14:00">14:00</option>
+            <option value="15:30">15:30</option>
+            <option value="16:00">16:00</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="inputMotivo">Motivo / Sintomas:</label>
+          <input type="text" id="inputMotivo" class="form-input" placeholder="Ex: Consulta de rotina, Dor nas costas...">
+        </div>
+
+        <div style="margin-top: 1.5rem; text-align: right;">
+          <button type="submit" class="btn btn-orange" style="width: 100%;">Confirmar Agendamento</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    Conecta Saude © 2026
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/paciente.js"></script>
+</body>
+</html>
